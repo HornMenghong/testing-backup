@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/output.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <main>
+    
+  </main>
+  <script>
+    // const BASE_URL = "https://nhamey-api.cheatdev.online/cuisines";
+    async function getData() {
+      const res = await fetch("https://nhamey-api.cheatdev.online/food-items");
+      const data = await res.json();
+      console.log(data[0]);
+      // return data;
+    }
+
+    getData();
+  </script>
+</body>
+</html>

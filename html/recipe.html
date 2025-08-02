@@ -3,65 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/output.css">
+  <link rel="stylesheet" href="/src/output.css">
   <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Testing</title>
+  <title>Recipe</title>
 </head>
 <body class="bg-gray-100">
   <header>
-    <nav class="flex justify-between items-center p-2">
-      <img class="h-15" src="/image/logo.png" alt="Logo">
-      <ul class="flex gap-5">
-        <li><a class="link" href="/index.html">Home</a></li>
-        <li><a class="link" href="/html/recipe.html">Recipe</a></li>
-        <li><a class="link" href="/html/favorite.html">Favorite</a></li>
-        <li><a class="link" href="/html/favorite.html">About</a></li>
-      </ul>
-      <a href=""><button class="button">Login</button></a>
-    </nav>
+    
   </header>
 
   <main>
-    <section class="relative">
-      <img class="w-full h-[500px] object-cover brightness-50" src="https://hanoivoyage.com/uploads/Blogs/Cambodia/Visit-Cambodia/cuisine/cambodia-food-03.webp" alt="hero">
-      <div class="absolute inset-0 bg-black opacity-10"></div>
-      <div class="absolute top-20 left-20 w-[40%] text-white">
-        <h1 class="text-5xl">Title</h1>
-        <p class="my-4">Descripion Nom Banh Chok refers both to the rice noodles themselves and the 
-        entire dish, which is a harmonious blend of fresh herbs, vegetables, 
-        and flavorful curry-like sauce poured over the noodles. It's light, 
-        aromatic, and distinctly Cambodian.</p>
-        <a href=""><button class="button">Explore More</button></a>
-      </div>
-    </section>
     <div class="mx-10">
-
-      <!-- Popular -->
+      <h2>Filter By</h2>
+      <hr>
       <section>
-        <h2>Popular</h2>
-        <hr class="my-10">
-        <!-- Food Cards -->
-        <div id="popular-cards" class="grid grid-cols-4 justify-center gap-10 my-10">
-        </div>
-      </section>
-
-      <!-- Recommendation -->
-      <section>
-        <h2>Recommendation</h2>
-        <hr class="my-10">
-        <!-- Food Cards -->
-        <div id="recommend-cards" class="grid grid-cols-4 justify-center gap-10 my-10">
-        </div>
-      </section>
-
-      <!-- General -->
-      <section>
-        <h2>General</h2>
-        <hr class="my-10">     
-        <!-- Cards -->
-        <div id="general-cards" class="grid grid-cols-4 justify-center gap-10 my-10">
+        <div id="recipe-cards" class="grid grid-cols-4 justify-center gap-10 my-10">
         </div>
       </section>
     </div>
@@ -112,6 +70,6 @@
       </div>
     </div>
   </footer>
-  <script type="module" src="/js/script.js"></script>
+  <script type="module" src="/js/recipe.js"></script>
 </body>
 </html>
