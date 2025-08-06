@@ -10,7 +10,7 @@ export const foodDetailsComponent = (food) => {
     .join("");
 
   return `
-  <section class="p-5 text-gray-700  shadow-lg">
+  <section class="p-5 text-gray-700 dark:text-white">
     <a href="/index.html" class="hover:text-primary transition-colors"><i class="fa-solid fa-arrow-left mb-5"></i> Back to Home</a>
     <br>
     <img class="w-full object-cover aspect-video" src="${food.image_url}" alt="food">

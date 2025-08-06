@@ -1,33 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/src/output.css">
-  <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="/image/pteahbay.png" type="image/x-icon">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>About</title>
 </head>
-<body class="bg-gray-100 dark:bg-[#393939] dark:text-white">
-  <header>
-    <nav class="flex justify-around items-center p-2">
-      <img src="/image/logo.png" alt="Logo">
-      <ul class="flex gap-5">
-        <li><a class="hover:underline underline-offset-2" href="/index.html">Home</a></li>
-        <li><a class="hover:underline underline-offset-2" href="/html/recipe.html">Recipe</a></li>
-        <li><a class="hover:underline underline-offset-2" href="/html/favorite.html">Favorite</a></li>
-        <li><a class="hover:underline underline-offset-2" href="/html/favorite.html">About</a></li>
+<body class="bg-gray-100 dark:bg-[#393939] dark:text-white mt-18">
+  <header class="shadow-md w-full fixed top-0 z-50 bg-gray-100 dark:bg-[#393939] dark:text-white">
+    <nav class="flex items-center justify-between p-4 max-w-7xl mx-auto">
+      <!-- Logo -->
+      <img class="h-10" src="/image/pteahbay.png" alt="Logo" />
+
+      <!-- Desktop Nav -->
+      <ul id="nav-links" class="hidden md:flex gap-5 items-center">
+        <li><a class="link" href="/index.html">Home</a></li>
+        <li><a class="link" href="/html/recipe.html">Recipe</a></li>
+        <li><a class="link" href="/html/favorite.html">Favorite</a></li>
+        <li><a class="link" href="/html/about.html">About</a></li>
       </ul>
+
+      <!-- Right: Login + Theme Toggle + Hamburger -->
+      <div class="flex items-center gap-3">
+        <a href="/html/login.html">
+          <button class="button">Login</button>
+        </a>
+        <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 transition-colors cursor-pointer">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <!-- Hamburger (mobile only) -->
+        <button id="hamburger-btn" class="md:hidden p-2 cursor-pointer hover:bg-gray-700 rounded-full">
+          <svg class="w-6 h-6 text-black hover:text-white dark:text-white" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <ul id="mobile-menu" class="md:hidden flex-col gap-4 px-4 pb-4 hidden">
+      <li><a class="link block py-2" href="/index.html">Home</a></li>
+      <li><a class="link block py-2" href="/html/recipe.html">Recipe</a></li>
+      <li><a class="link block py-2" href="/html/favorite.html">Favorite</a></li>
+      <li><a class="link block py-2" href="/html/about.html">About</a></li>
+    </ul>
   </header>
 
   <main>
-
+    <div class="mx-10">
+      <section class="grid grid-cols-2">
+        <div>
+          <h1 class="text-3xl my-5">About Our Story</h1>
+          <p>Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in city's rich culinary culture, we aim to honor our local roots while infusing a global palate.</p>
+          <p>At place, we believe that dining is not just about food, but also about the overall experience. Our populter food, renowned for culture to make every.</p>
+        </div>
+        <div class="flex justify-center items-center">
+          <img class="w-full object-cover" src="https://images.deliveryhero.io/image/fd-kh/LH/mn76-listing.jpg" alt="food">
+        </div>
+      </section>
+      <h2 class="text-center">Our Mentors</h2>
+      <hr class="mb-5">
+      <section class="flex justify-evenly">
+        <!-- member -->
+        <div class="p-2 rounded-full flex flex-col justify-center items-center">
+          <img class="w-42 h-42 rounded-full object-cover mb-2" src="/image/t1.jpg" alt="member">
+          <h3 class="text-lg font-semibold">Ms. Srorng Sokcheat</h3>
+          <p class="font-semibold">Mentor</p>
+          <div class="mt-2">
+            <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <!-- member -->
+        <div class="p-2 rounded-full flex flex-col justify-center items-center">
+          <img class="w-42 h-42 rounded-full object-cover mb-2" src="/image/t2.jpg" alt="member">
+          <h3 class="text-lg font-semibold">Mr. Kay Keo</h3>
+          <p class="font-semibold">Mentor</p>
+          <div class="mt-2">
+            <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="text-center">Our Team</h2>
+        <hr class="mb-5">
+        <!-- member -->
+          <div class="p-2 rounded-full flex flex-col justify-center items-center">
+            <img class="w-42 h-42 rounded-full object-cover mb-2" src="/image/p6.png" alt="member">
+            <h3 class="text-lg font-semibold">Thy Vanna</h3>
+            <p class="font-semibold">UX/UI</p>
+            <div class="mt-2">
+              <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        <div class="grid grid-cols-2 md:grid-cols-3">
+        <!-- member -->
+          <div class="p-2 rounded-full flex flex-col justify-center items-center">
+            <img class="w-42 h-42 rounded-full object-cover mb-2" src="/image/p1.png" alt="member">
+            <h3 class="text-lg font-semibold">Horn Menghong</h3>
+            <p class="font-semibold">Coding</p>
+            <div class="mt-2">
+              <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        <!-- member -->
+          <div class="p-2 rounded-full flex flex-col justify-center items-center">
+            <img class="w-42 h-42 rounded-full object-cover mb-2" src="/image/p7.JPEG" alt="member">
+            <h3 class="text-lg font-semibold">Muth MoniPanha</h3>
+            <p class="font-semibold">UX/UI</p>
+            <div class="mt-2">
+              <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        <!-- member -->
+          <div class="p-2 rounded-full flex flex-col justify-center items-center">
+            <img class="w-42 h-42 rounded-full object-cover mb-2" src="/image/p2.jpg" alt="member">
+            <h3 class="text-lg font-semibold">Phoueng Sreymean</h3>
+            <p class="font-semibold">UX/UI</p>
+            <div class="mt-2">
+              <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        <!-- member -->
+          <div class="p-2 rounded-full flex flex-col justify-center items-center">
+            <img class="w-42 h-42 rounded-full object-cover mb-2" src="/image/p5.jpg" alt="member">
+            <h3 class="text-lg font-semibold">Dy Leangey</h3>
+            <p class="font-semibold">Ux/UI</p>
+            <div class="mt-2">
+              <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        <!-- member -->
+          <div class="p-2 rounded-full flex flex-col justify-center items-center">
+            <img class="w-42 h-42 rounded-full object-cover mb-2" src="/image/p4.jpg" alt="member">
+            <h3 class="text-lg font-semibold">Yorng Rayuth</h3>
+            <p class="font-semibold">Video Editing</p>
+            <div class="mt-2">
+              <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        <!-- member -->
+          <div class="p-2 rounded-full flex flex-col justify-center items-center">
+            <img class="w-42 h-42 rounded-full object-cover mb-2" src="/image/p3.jpg" alt="member">
+            <h3 class="text-lg font-semibold">Oeurn Piseth</h3>
+            <p class="font-semibold">Presenter</p>
+            <div class="mt-2">
+              <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="text-md md:text-xl p-1 rounded-full bg-primary"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+      </section>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    
+  <footer class="flex flex-col">
+    <div class="mx-10">
+      <hr class="my-5">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <div class="grid grid-cols-2">
+          <!-- ITSAD -->
+          <div class="flex flex-col justify-start items-center">
+            <h3 class="text-xl">Organized by</h3>
+            <img class=" h-20 md:h-40" src="/image/ISTAD.png" alt="logo">
+            <p>Institute of Science and Technology Advanced Development</p>
+          </div>
+          <!-- PtehBay -->
+          <div class="flex flex-col justify-start items-center">
+            <h3 class="text-xl">Sponsored By</h3>
+            <img class=" h-20 md:h-40" src="/image/pteahbay.png" alt="logo">
+            <p>PtehBay</p>
+          </div>
+        </div>
+        <hr class="lg:hidden">
+          <div class="flex justify-around">
+            <!-- Quick Link -->
+            <nav>
+              <h3 class="text-xl">Pages</h3>
+              <ul class="flex flex-col gap-2 my-5">
+                <li><a class="link" href="/index.html">Home</a></li>
+                <li><a class="link" href="/html/recipe.html">Recipe</a></li>
+                <li><a class="link" href="/html/favorite.html">Favorite</a></li>
+                <li><a class="link" href="/html/about.html">About</a></li>
+              </ul>
+            </nav>
+            <!-- Contact Us -->
+            <div>
+              <h3 class="text-xl">Contact Us</h3>
+              <address class="my-5">
+                <p>Gmail: <a href="mailto:Pteahbay@gmail.com"></a>Pteahbay@gmail.com</p>
+                <p>Tel: <a href="telto:097123456"></a>(855+) 097 123 456</p>
+              </address>
+              <div>
+                <a href="#" class="text-md md:text-xl p-2 rounded-full bg-[#ff8506]"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="text-md md:text-xl p-2 rounded-full bg-[#ff8506]"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="text-md md:text-xl p-2 rounded-full bg-[#ff8506]"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-md md:text-xl p-2 rounded-full bg-[#ff8506]"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+      </div>
+      <hr class="mt-5">
+      <div class="flex justify-center items-centers my-5">
+        <p>Copyright &copy;2025 PtehBay. All Right Reserved</p>
+      </div>
+    </div>
   </footer>
+  <script type="module" src="/js/auth.js"></script>
+  <script type="module" src="/js/toggle.js"></script>
 </body>
 </html>

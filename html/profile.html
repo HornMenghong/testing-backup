@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/output.css">
+  <link rel="icon" href="/image/ptehbay.png" type="image/png">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Profile</title>
+</head>
+<body class="bg-gray-100 dark:bg-[#393939] dark:text-white">
+  <main>
+    <div class="mx-10">
+      <a href="/index.html" class="hover:text-primary transition-colors"><i class="fa-solid fa-arrow-left my-5"></i> Back to Home</a>
+      <h1 class="text-3xl font-bold mb-6 text-center">Your Profile</h1>
+
+      <!-- Profile Picture -->
+      <div class="flex flex-col items-center mb-6">
+        <img id="profile-picture" src="/image/default-profile.png" alt="Profile Picture" class="h-32 w-32 rounded-full object-cover border border-gray-300 shadow-md">
+        <label for="image-upload" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded cursor-pointer hover:bg-blue-700 transition">Change Picture</label>
+        <input type="file" id="image-upload" accept="image/*" class="hidden">
+      </div>
+
+      <!-- Profile Info -->
+      <form id="profile-form" class="space-y-4">
+        <div>
+          <label for="username" class="block font-medium">Username</label>
+          <input type="text" id="username" class="w-full p-2 border border-gray-300 rounded" required>
+        </div>
+
+        <div>
+          <label for="email" class="block font-medium">Email</label>
+          <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded" required>
+        </div>
+
+        <div>
+          <label for="bio" class="block font-medium">Bio</label>
+          <textarea id="bio" rows="4" class="w-full p-2 border border-gray-300 rounded" placeholder="Tell us something about yourself..."></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-green-700 text-white py-2 rounded cursor-pointer hover:bg-green-800 transition">Save Changes</button>
+        <button id="logout-btn" class="button bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded">
+          Logout
+        </button>
+      </form>
+      
+    </div>
+  </main>
+  <script type="module" src="/js/toggle.js"></script>
+  <script type="module" src="/js/profile.js"></script>
+</body>
+</html>

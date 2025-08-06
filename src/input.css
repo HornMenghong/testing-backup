@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-primary: #FF8506;
 }
@@ -18,7 +20,7 @@
 
 @layer components {
   .button {
-    @apply py-1 px-4 bg-primary rounded-xl text-white cursor-pointer;
+    @apply py-1 px-4 bg-primary hover:bg-orange-500 rounded-xl text-white cursor-pointer;
   }
   .link {
     @apply hover:text-primary hover:underline underline-offset-2 transition-colors;

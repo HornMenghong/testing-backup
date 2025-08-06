@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/output.css">
+  <link rel="icon" href="/image/ptehbay.png" type="image/png">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Login</title>
+</head>
+<body class="bg-gray-100 dark:bg-[#393939] dark:text-white">
+  
+  <main class="grid md:grid-cols-2 shadow-lg mt-[10%] mx-[10%] rounded-2xl">
+    <form class="p-5" id="login-form">
+      <h1 class="text-3xl text-center">Welcome to Pteybay Login</h1>
+      <div class="my-5">
+        <label for="email">Email Address</label><br>
+        <input class="p-2 w-full border border-gray-300 rounded-xl shadow-sm" type="email" id="email" name="email" placeholder="user@gmail.com">
+      </div>
+
+      <div>
+        <label for="password">Password</label><br>
+        <input class="p-2 w-full border border-gray-300 rounded-xl shadow-sm" type="text" id="password" name="password" placeholder="Password">
+      </div>
+      <a href=""><p class="text-blue-900 my-5 text-right hover:underline">forgot password</p></a>
+      <button type="submit" class="button w-full bg-green-700 hover:bg-green-800 transition-colors">Login</button>
+      <p class="text-center my-5 text-gray-700">Or Login Using</p>
+      <div class="flex gap-2 justify-center">
+        <a href="#" class="text-xl p-2 rounded-full shadow-sm"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="text-xl p-2 rounded-full shadow-sm"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="text-xl p-2 rounded-full shadow-sm"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-xl p-2 rounded-full shadow-sm"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <p class="text-center my-2">Don't have account? <a class="text-blue-900 hover:underline" href="/html/signup.html">Sign up</a></p>
+    </form>
+    <img class="h-full object-cover rounded-r-2xl max-md:hidden" src="https://hanoivoyage.com/uploads/Blogs/Cambodia/Visit-Cambodia/cuisine/cambodia-food-03.webp" alt="Login image">
+  </main>
+  <script type="module" src="/js/toggle.js"></script>
+  <script type="module" src="/js/login.js"></script>
+</body>
+</html>
