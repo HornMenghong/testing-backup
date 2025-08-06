@@ -39,14 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("Profile updated successfully!");
   });
   document.getElementById("logout-btn").addEventListener("click", () => {
-  // Remove stored user info & token
-  localStorage.removeItem("token");
-  localStorage.removeItem("user");
-
-  // Optional: clear all localStorage if you want
-  // localStorage.clear();
-
-  // Redirect to login page (or home)
-  window.location.href = "/index.html";
+    const confirmed = confirm("Are you sure you want to log out?");
+    if (confirmed) {
+      localStorage.removeItem("access_token");
+      localStorage.removeItem("user");
+      alert("Logout successful!");
+      window.location.href = "/index.html";
+    } else {
+      // User cancelled logout — do nothing
+    }
   });
 });
