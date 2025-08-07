@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambo&display=swap');
 @import "tailwindcss";
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-primary: #FF8506;
+}
+
+:root {
+  --font-display: 'Cambo', sans-serif;
+}
+
+body {
+  font-family: var(--font-display);
 }
 
 @layer base {
