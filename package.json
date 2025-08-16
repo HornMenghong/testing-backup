@@ -1,9 +1,12 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
+    "form-data": "^4.0.4",
+    "multiparty": "^4.2.3",
+    "node-fetch": "^2.7.0",
     "tailwindcss": "^4.1.11"
   },
   "scripts": {
-    "start" : "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "start": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
   }
 }
