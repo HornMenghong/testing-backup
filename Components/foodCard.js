@@ -16,7 +16,13 @@ export const foodCardComponent = (food) => {
                   <i class="fa-solid fa-clipboard-list mb-2 !hidden md:!inline"></i> ${type}
                 </span>
               `).join("")}
-              <p class="mt-3 line-clamp-2">${food.description}</p>
+              <p class="my-3 line-clamp-2">${food.description}</p>
+
+              <!-- 🆕 User Info -->
+              <div class="flex items-center gap-2">
+                <img src="${food.user_profile_url || '/image/default-profile.png'}" class="w-8 h-8 rounded-full"/>
+                <span class="text-sm text-gray-600">${food.user_name || 'Anonymous'}</span>
+              </div>
             </div>
           </div>
   `

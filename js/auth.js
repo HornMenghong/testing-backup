@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Optional: Add profile picture to nav bar
     const profilePicUrl = user.profile_picture?.trim()
-    ? user.profile_picture : "/image/default-profile.png"; // fallback image
+      ? user.profile_picture
+      : "/image/default-profile.png"; // fallback image
     const profileImage = document.createElement("img");
     profileImage.src = profilePicUrl;
     profileImage.alt = "Profile";
@@ -26,6 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const parent = document.querySelector("nav .flex.items-center.gap-3");
     if (parent) {
       parent.insertBefore(profileLink, parent.lastElementChild); // before theme toggle
+    }
+  } else {
+    // Hide post recipe button if not logged in
+    const postBtn = document.getElementById("post-recipe-btn");
+    if (postBtn) {
+      postBtn.style.display = "none";
     }
   }
 });

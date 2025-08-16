@@ -1,29 +1,30 @@
-document.getElementById("signup-form").addEventListener("submit", async function (e) {
-  e.preventDefault();
+import fetch from "node-fetch";
+import FormData from "form-data";
 
-  const username = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const confirmPassword = document.getElementById("c-password").value;
+export default async function handler(req, res) {
+  if (req.method === "POST") {
+    try {
+      const formData = new FormData();
+      for (const key in req.body) {
+        formData.append(key, req.body[key]);
+      }
 
-  const response = await fetch("https://nhamey-api.cheatdev.online/register", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      username,
-      email,
-      password,
-      confirm_password: confirmPassword,
-    }),
-  });
+      const response = await fetch("https://nhamey-api.cheatdev.online/food-items", {
+        method: "POST",
+        headers: {
+          "Authorization": req.headers.authorization || ""
+        },
+        body: formData
+      });
 
-  if (response.ok) {
-    alert("Registration successful!");
-    window.location.href = "/html/login.html";
+      const data = await response.json();
+      res.status(response.status).json(data);
+
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: "Proxy error" });
+    }
   } else {
-    const error = await response.json();
-    alert("Registration failed: " + (error.detail?.[0]?.msg || "Unknown error"));
+    res.status(405).json({ error: "Method not allowed" });
   }
-});
+}
